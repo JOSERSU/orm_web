@@ -35,7 +35,7 @@ public class ClienteController {
         return ResponseEntity.ok(clientesService.actualizarCliente(id, cliente));
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCliente(@PathVariable Long id){
         clientesService.eliminarCliente(id);
         return ResponseEntity.noContent().build();
